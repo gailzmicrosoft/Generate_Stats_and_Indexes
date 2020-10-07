@@ -1,0 +1,8 @@
+﻿Active,DatabaseName,SchemaName,TableName,StatsColumns,StatsScanRate,NotForActualScanRateInCode
+1,synapsepool_db_name,dbo,DimAccount_Test1,AccountKey,110,100
+1,synapsepool_db_name,dbo,DimAccount_Test2,AccountKey|ParentAccountKey,50,50
+1,synapsepool_db_name,dbo,DimAccount_Test3,AccountKey,75,75
+1,synapsepool_db_name,dbo,DimAccount_Test4,AccountKey|ParentAccountKey,10,10
+1,synapsepool_db_name,dbo,DimAccount_Test5,AccountKey,35,35
+1,synapsepool_db_name,dbo,DimAccount_Test6,AccountKey,50,50
+1,synapsepool_db_name,dbo,DimAccount_Test7,AccountKey,-120,100
