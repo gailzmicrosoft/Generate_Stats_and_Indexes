@@ -183,6 +183,8 @@ if ($RebuildTableIndexFlag -ne '0') {
     $CodeGenerationTime = (Get-Date)
     "-- Code Generated at " + $CodeGenerationTime >> $RedbuildTableIndexFileFullPath 
     ' ' >> $RedbuildTableIndexFileFullPath 
+    "-- Please scale up Synapse SQL Pool before you execute this code. " >> $RedbuildTableIndexFileFullPath 
+    ' ' >> $RedbuildTableIndexFileFullPath 
 }
 
 # Reorganize Table Index 
@@ -196,6 +198,8 @@ if ($ReorganizeTableIndexFlag -ne '0') {
     '/* Reorganize Table Index */' >> $ReorganizeTableIndexFileFullPath 
     $CodeGenerationTime = (Get-Date)
     "-- Code Generated at " + $CodeGenerationTime >> $ReorganizeTableIndexFileFullPath 
+    ' ' >> $ReorganizeTableIndexFileFullPath 
+    "-- Please scale up Synapse SQL Pool before you execute this code. " >> $ReorganizeTableIndexFileFullPath 
     ' ' >> $ReorganizeTableIndexFileFullPath 
 }
 
