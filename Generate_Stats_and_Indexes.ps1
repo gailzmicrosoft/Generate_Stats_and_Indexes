@@ -12,7 +12,7 @@
 #                                                                                                                      #
 #                                       USE AT YOUR OWN RISK.                                                          #
 #  Author: Gaiye "Gail" Zhou                                                                                           #
-#  October 2020                                                                                                      #
+#  October 2020                                                                                                        #
 #                                                                                                                      #
 #                                                                                                                      #
 #======================================================================================================================#
@@ -122,7 +122,7 @@ if ($CreateTableStatsFlag -ne '0') {
         Write-Host "Previous File will be overwritten: " $CreateTableStatsFileFullPath  -ForegroundColor Yellow
         Remove-Item $CreateTableStatsFileFullPath   -Force
     }
-    '/* 8. Create Table Statistics */' >> $CreateTableStatsFileFullPath 
+    '/* Create Table Statistics */' >> $CreateTableStatsFileFullPath 
     $CodeGenerationTime = (Get-Date)
     "-- Code Generated at " + $CodeGenerationTime >> $CreateTableStatsFileFullPath 
     ' ' >> $CreateTableStatsFileFullPath 
@@ -136,7 +136,7 @@ if ($DropTableStatsFlag -ne '0') {
         Write-Host "Previous File will be overwritten: " $DropTableStatsFileFullPath  -ForegroundColor Yellow
         Remove-Item $DropTableStatsFileFullPath   -Force
     }
-    '/* 9. Drop Table Statistics */' >> $DropTableStatsFileFullPath 
+    '/* Drop Table Statistics */' >> $DropTableStatsFileFullPath 
     $CodeGenerationTime = (Get-Date)
     "-- Code Generated at " + $CodeGenerationTime >> $DropTableStatsFileFullPath 
     ' ' >> $DropTableStatsFileFullPath 
@@ -151,7 +151,7 @@ if ($UpdateTableStatsFullScanFlag -ne '0') {
         Write-Host "Previous File will be overwritten: " $UpdateTableStatsFullScanFileFullPath  -ForegroundColor Yellow
         Remove-Item $UpdateTableStatsFullScanFileFullPath   -Force
     }
-    '/* 10A. Update Table Stats With Full Scan */' >> $UpdateTableStatsFullScanFileFullPath 
+    '/* Update Table Stats With Full Scan */' >> $UpdateTableStatsFullScanFileFullPath 
     $CodeGenerationTime = (Get-Date)
     "-- Code Generated at " + $CodeGenerationTime >> $UpdateTableStatsFullScanFileFullPath 
     ' ' >> $UpdateTableStatsFullScanFileFullPath 
@@ -165,7 +165,7 @@ if ($UpdateTableStatsCustomScanFlag -ne '0') {
         Write-Host "Previous File will be overwritten: " $UpdateTableStatsCustomScanFileFullPath  -ForegroundColor Yellow
         Remove-Item $UpdateTableStatsCustomScanFileFullPath   -Force
     }
-    '/* 10B. Update Table Stats With Custom Scan Rage  */' >> $UpdateTableStatsCustomScanFileFullPath 
+    '/* Update Table Stats With Custom Scan Rage  */' >> $UpdateTableStatsCustomScanFileFullPath 
     $CodeGenerationTime = (Get-Date)
     "-- Code Generated at " + $CodeGenerationTime >> $UpdateTableStatsCustomScanFileFullPath 
     ' ' >> $UpdateTableStatsCustomScanFileFullPath 
