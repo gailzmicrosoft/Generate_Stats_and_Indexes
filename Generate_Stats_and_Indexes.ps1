@@ -218,6 +218,13 @@ ForEach ($csvItem in $csvTablesCfgFile) {
         $StatsColumns = $csvItem.StatsColumns
         $StatsScanRate = $csvItem.StatsScanRate
 
+        if ( ![string]::IsNullOrEmpty($StatsColumns) -and [string]::IsNullOrEmpty($StatsScanRate) )
+        {
+            Write-Host " For $SchemaName.$TableName StatsColumns defined but StatsScanRate not defined. I am setting it as 100."  -ForegroundColor Magenta
+            $StatsScanRate = 100
+
+        }
+
         # Create Table Stats 
         if ($CreateTableStatsFlag -eq '1') {
             if ( [string]::IsNullOrEmpty($StatsColumns) ) {
